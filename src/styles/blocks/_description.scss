@@ -1,0 +1,54 @@
+.description {
+  position: absolute;
+  top: 25%;
+  max-width: 550px;
+  margin-bottom: 40px;
+  z-index: 3;
+
+  &__heading {
+    color: #22356f;
+    font-size: 48px;
+    line-height: 53px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 42px;
+    color: #22356f;
+    letter-spacing: 0.04rem;
+  }
+
+  &__button {
+    width: 150px;
+    height: 50px;
+    margin: 120px 40px 70px 0;
+    border: none;
+    background-color: #f9b640;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: #f4f9e2;
+      color: #f9b640;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .description {
+    &__heading {
+      font-size: 24px;
+    }
+
+    &__button {
+      margin: 30px 10px;
+    }
+  }
+}

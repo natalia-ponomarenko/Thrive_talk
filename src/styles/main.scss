@@ -1,6 +1,15 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "./blocks/header";
+@import "./blocks/nav";
+@import "reset.scss";
+@import "./blocks/description";
+@import "./blocks/reasons";
+@import "./blocks/about";
+@import "./blocks/cards";
+@import "./blocks/section";
+@import "general.scss";
 
 body {
   background: $c-gray;

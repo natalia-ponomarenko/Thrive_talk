@@ -1,0 +1,39 @@
+.nav {
+  &__list {
+    display: flex;
+    left: 50%;
+  }
+
+  &__item {
+    padding: 7px 20px;
+
+    &--active:hover::after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 60px;
+      background-color: black;
+      height: 1px;
+      margin-top: 10px;
+    }
+  }
+
+  &__link {
+    right: 150px;
+    text-decoration: none;
+    color: #22356f;
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: 700;
+
+    &:hover {
+      color: #62d0df;
+    }
+  }
+}
+
+@media screen and (max-width: $small-screen-breakpoint) {
+  .nav__list {
+    flex-direction: column;
+  }
+}
