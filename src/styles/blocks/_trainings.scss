@@ -1,0 +1,51 @@
+.trainings {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 240px;
+  padding: 22px 20px 40px;
+  background-color: white;
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 25px;
+    color: #9099b6;
+    padding-top: 28px;
+  }
+
+  &__heading {
+    font-size: 28px;
+    line-height: 33px;
+    color: #22356f;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 900px) {
+  .trainings {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+    &__article {
+      padding: 0 20px;
+    }
+    &__heading {
+      font-size: 24px;
+    }
+    &__text {
+      padding-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .trainings {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+  }
+}

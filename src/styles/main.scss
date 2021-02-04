@@ -7,10 +7,9 @@
 @import "./blocks/description";
 @import "./blocks/reasons";
 @import "./blocks/about";
-@import "./blocks/cards";
+@import "./blocks/help";
 @import "./blocks/section";
 @import "general.scss";
-
-body {
-  background: $c-gray;
-}
+@import "./blocks/activities";
+@import "./blocks/trainings";
+@import "./blocks/useful";
