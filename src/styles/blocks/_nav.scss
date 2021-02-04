@@ -31,9 +31,3 @@
     }
   }
 }
-
-@media screen and (max-width: $small-screen-breakpoint) {
-  .nav__list {
-    flex-direction: column;
-  }
-}

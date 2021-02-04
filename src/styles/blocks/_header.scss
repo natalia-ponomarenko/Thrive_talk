@@ -1,4 +1,3 @@
-
 .header {
   height: 840px;
   background-color: #f4f9e2;
@@ -88,19 +87,26 @@
   font-weight: 700;
 }
 
+@media screen and (max-width: 1200px) {
+  .header {
+    &__image {
+      display: none;
+    }
+  }
+}
+
 @media screen and (max-width: 900px) {
   .header {
-    padding-left: 40px;
-    &__button {
-      margin-top: 10px;
+    height: 640px;
+    padding-left: 50%;
+
+    &__top {
+      left: 40px;
+      right: 40px;
     }
 
     &__description {
       margin-top: 50px;
-    }
-    &__logo--down,
-    &__image {
-      display: none;
     }
   }
 }

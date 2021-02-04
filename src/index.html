@@ -10,6 +10,18 @@
   <body>
     <header class="header">
       <section class="header__section">
+        <div class="header__menu">
+          <input id="menu__toggle" type="checkbox">
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>
+          <ul class="menu__box">
+            <li><a class="menu__item" href="#">Home</a></li>
+            <li><a class="menu__item" href="#">About</a></li>
+            <li><a class="menu__item" href="#">Services</a></li>
+            <li><a class="menu__item" href="#">Blog</a></li>
+          </ul>
+        </div>
         <div class="header__wrapper">
           <img src="./images/persian photo 8.jpg"
             class="header__image"
@@ -70,10 +82,13 @@
         <div class="main__about about">
           <h2 class="about__heading">About us</h2>
           <p class="about__text">We want to help you thrive! Whether you are just looking for someone to talk to, or are struggling with a mental wellness issue we’re here to help.  Our highly talented therapists can help you with a range of issues including relationships, sex, PTSD, depression, social anxiety, or even just caring for yourself more.</p>
-          <p class="about__after">We can help you with</p>
         </div>
+      </div>
       </section>
       <section class="main__section section">
+        <div class="main__help help__message">
+          <p class="help__after">We can help you with</p>
+        </div>
         <div class="main__help help">
           <div class="help__block help__block--weight-lifting">
             <p class="help__text">Weight Lifting</p>
@@ -168,7 +183,54 @@
           </div>
         </div>
       </section>
+      <section class="main__section">
+        <div class="main__assessment assessment">
+          <div class="assessment__message">
+            <h2 class="assessment__heading">Contact us</h2>
+            <h2 class="assessment__title">Ready. Set. Smile</h2>
+            <p class="assessment__text">Take the free online assessment to see if you are a candidate and get started on your journey.</p>
+            <p class="assessment__after">Get help now</p>
+          </div>
+          <img src="./images/charles-etoroma-390119.png"
+            alt="Men smiling to each other"
+            class="assessment__img"
+          >
+        </div>
+      </section>
+      <section class="main__section">
+        <div class="main__info info">
+          <img src="./images/autumn-goodman-242825.png"
+            alt="Girl is smiling"
+            class="info__img"
+          >
+          <div class="info__container">
+            <div class="info__block">
+              <h2 class="info__heading">Some info</h2>
+              <p class="info__paragraph">Rapid COVID-19 Test now available! Due to the overwhelming demand for the rapid COVID-19 test, we encourage patients to schedule an appointment for testing ahead of time.</p>
+            </div>
+            <div class="info__block">
+              <h2 class="info__heading">Enfold health</h2>
+              <p class="info__paragraph">Main Street 1, Olcott Buffalo, United States</p>
+              <div class="info__links">
+                <a href="mailto:office@enfold-health.com" class="link">
+                  office@enfold-health.com
+                </a>
+                <a href="+555283784333" class="link">
+                +555 283 784 333
+                </a>
+              </div>
+            </div>
+            <div class="info__block">
+              <h2 class="info__heading">Office hours</h2>
+              <p class="info__paragraph">Mo-Fr: 8:00-19:00<br>Sa: 8:00-14:00<br>Su: closed</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <p class="footer__text">&copy;Copyright - ThriveTalk  2017</p>
+    </footer>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
     </html>

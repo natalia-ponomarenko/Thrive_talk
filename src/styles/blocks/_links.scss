@@ -1,0 +1,14 @@
+.link {
+  text-decoration: none;
+  color: #207fff;
+  
+  &:visited {
+    color: #22356f;
+  }
+  &:hover {
+    color: #62d0df;
+  }
+  &:active {
+    color: #c4e769;
+  }
+}

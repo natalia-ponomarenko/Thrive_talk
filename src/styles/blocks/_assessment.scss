@@ -1,5 +1,5 @@
-.useful {
-  background-color: white;
+.assessment {
+  background-color: #22356f;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,35 +11,38 @@
   &__message {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
+    max-width: 580px;
     margin: 0 auto;
+    color: white;
   }
 
   &__heading {
     font-size: 16px;
     line-height: 12px;
-    color: #22356f;
+    color: white;
     text-transform: uppercase;
     font-weight: 500;
     padding-bottom: 225px;
     padding-top: 100px;
-    letter-spacing: 0.6px;
+    letter-spacing: 6px;
+  }
+
+  &__title {
+    font-size: 64px;
+    line-height: 94px;
+    letter-spacing: -1px;
   }
 
   &__text {
-    color: #22356f;
+    color: white;
     font-size: 36px;
     line-height: 53px;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
     font-weight: 700;
   }
 
-  &__logo {
-    color: #62d0df;
-  }
-
   &__after {
-    color: #fab63e;
+    color: #62d0df;
     font-size: 16px;
     line-height: 23px;
     letter-spacing: 1px;
@@ -50,18 +53,21 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .useful {
+  .assessment {
     &__message {
       padding: 0 20px;
     }
     &__heading {
       padding-bottom: 100px;
     }
+    &__title {
+      font-size: 40px;
+    }
   }
 }
 
 @media screen and (max-width: 900px) {
-  .useful {
+  .assessment {
     flex-direction: column;
     justify-content: center;
     &__message {

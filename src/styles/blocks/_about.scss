@@ -25,18 +25,10 @@
     font-size: 24px;
     line-height: 34px;
     color: #22356f;
-
-    &__after {
-      color: #9099b6;
-      font-size: 16px;
-      line-height: 19px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .about {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -45,6 +37,7 @@
     &__heading {
       margin-bottom: 20px;
       margin-top: 30px;
+      justify-self: center;
       
     }
   }
