@@ -1,15 +1,17 @@
 .help {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 300px;
   padding-bottom: 120px;
   background-color: white;
+
   &__message {
     display: flex;
     justify-content: center;
     padding-bottom: 25px;
     background-color: white;
   }
+
   &__after {
     color: #9099b6;
     font-size: 16px;
@@ -22,8 +24,24 @@
     box-sizing: border-box;
     display: flex;
     justify-content: center;
+    
+    &--weight-lifting {
+      background-color: #ffe2de;
+    }
 
+    &--running {
+      background-color: #c4e769;
+    }
+
+    &--iron {
+      background-color: #62d0df;
+    }
+
+    &--fitness {
+      background-color: #0052c1;
+    }
   }
+
   &__text {
     position: relative;
     padding-top: 50px;
@@ -31,21 +49,9 @@
     font-weight: 700;
     line-height: 34px;
     color: white;
-    width: 220px;
+    width: 45%;
     text-align: center;
     margin-top: 20px;
-
-    &::before {
-      display: block;
-      position: absolute;
-      content: "";
-      background-color: #e9b730;
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      left: -15%;
-      top: 20%;
-    }
 
     &::after {
       content: "";
@@ -53,36 +59,32 @@
       position: absolute;
       background-color: white;
       height: 1px;
-      width: 220px;
+      width: 100%;
       top: 10%;
+    }
+
+    &:hover {
+      color: #f4f9e2;
+
+      &::before {
+        display: block;
+        position: absolute;
+        content: "";
+        background-color: #e9b730;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        left: -10%;
+        top: 20%;
+      }
     }
   }
 
-  &__block--weight-lifting {
-    background-color: #ffe2de;
-  }
-
-  &__block--running {
-    background-color: #c4e769;
-  }
-
-  &__block--iron {
-    background-color: #62d0df;
-  }
-
-  &__block--fitness {
-    background-color: #0052c1;
-  }
-}
-
-@media (max-width: 900px) {
-  .help {
+  @media (max-width: 900px) {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
-@media (max-width: 600px) {
-  .help {
+  @media (max-width: 600px) {
     grid-template-columns: 1fr;
     grid-auto-rows: 300px;
 
@@ -93,7 +95,7 @@
       font-size: 24px;
       &::before {
         top: 20%;
-        left: -5%;
+        left: -15%;
       }
     }
   }

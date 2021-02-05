@@ -31,7 +31,6 @@
     line-height: 23px;
     color: #909ab7;
     padding-bottom: 20px;
-
   }
 
   &__links {
@@ -42,15 +41,11 @@
   &__img {
     width: 100%;
   }
-}
-@media (max-width: 1200px) {
-  .info {
+  @media (max-width: 1200px) {
     flex-direction: column;
   }
-}
 
-@media (max-width: 600px) {
-  .info {
+  @media (max-width: 600px) {
     &__container {
       flex-direction: column;
       padding: 40px 20px;

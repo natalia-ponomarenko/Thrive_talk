@@ -12,6 +12,7 @@
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 50px;
+    letter-spacing: -0.04em;
   }
 
   &__text {
@@ -19,7 +20,6 @@
     font-weight: 500;
     line-height: 42px;
     color: #22356f;
-    letter-spacing: 0.04rem;
   }
 
   &__button {
@@ -33,27 +33,25 @@
     font-weight: 700;
     letter-spacing: 0.1em;
     border-radius: 3px;
+    outline: none;
 
     &:hover {
       background-color: #f4f9e2;
       color: #f9b640;
     }
   }
-}
 
-@media screen and (max-width: 900px) {
-  .description {
+  @media screen and (max-width: 900px) {
     &__heading {
       font-size: 24px;
     }
-
+  
     &__button {
       margin: 30px 10px;
     }
   }
-}
-@media screen and (max-width: 800px) {
-  .description {
+
+  @media screen and (max-width: 800px) {
     top: 7%;
     left: 10%;
     max-width: 290px;
@@ -62,6 +60,7 @@
       font-size: 18px;
       line-height: 32px;
     }
+    
     &__heading {
       font-size: 20px;
       line-height: 36px;
