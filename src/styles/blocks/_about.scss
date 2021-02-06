@@ -1,33 +1,36 @@
 .about {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  background-color: white;
+
   padding: 150px 0 75px;
+  background-color: $light-color;
 
   &__heading {
     margin: 0 auto;
     padding-top: 25px;
-    text-transform: uppercase;
     margin-left: 105px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
+
     font-size: 16px;
+    font-weight: $font-weight-regular;
     line-height: 22.5px;
-    color: #22356f;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $dark-color;
   }
 
   &__text {
-    max-width: 550px;
     margin-bottom: 50px;
     padding: 20px;
-    font-weight: 700;
+    max-width: 550px;
+
     font-size: 24px;
+    font-weight: $font-weight-bold;
     line-height: 34px;
-    color: #22356f;
     letter-spacing: 0.06em;
+    color: $dark-color;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: $mobile-screen-breakpoint) {
     grid-template-columns: 1fr;
     justify-items: center;
     padding: 20px;

@@ -1,17 +1,17 @@
 .footer {
-  display: flex;
-  align-items: center;
-  background-color: #62d0df;
+  @include flex-align-centered;
   height: 80px;
   padding-left: 200px;
 
+  background-color: $accent-color;
+
   &__text {
-    color: white;
     font-size: 14px;
     line-height: 11px;
+    color: $light-color;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: $mobile-screen-breakpoint) {
     padding-left: 50px;
   }
 }

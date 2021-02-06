@@ -1,54 +1,58 @@
 .useful {
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
+  @include flex-spaced;
   align-items: center;
+  background-color: $light-color;
 
   &__img {
     object-fit: contain;
   }
 
   &__message {
-    display: flex;
-    flex-direction: column;
+    @include column;
     max-width: 600px;
     margin: 0 auto;
   }
 
   &__heading {
-    font-size: 16px;
-    line-height: 12px;
-    color: #22356f;
-    text-transform: uppercase;
-    font-weight: 500;
     padding-bottom: 225px;
     padding-top: 100px;
+    
+    font-size: 16px;
+    font-weight: $font-weight-regular;
+    line-height: 12px;
+    text-transform: uppercase;
     letter-spacing: 0.6px;
+    color: $dark-color;
   }
 
   &__text {
-    color: #22356f;
     font-size: 36px;
+    font-weight: $font-weight-bold;
     line-height: 53px;
     letter-spacing: -1px;
-    font-weight: 700;
+    color: $dark-color;
   }
 
   &__logo {
-    color: #62d0df;
+    color: $accent-color;
   }
 
   &__after {
-    color: #fab63e;
+    padding-top: 150px;
     font-size: 16px;
     line-height: 23px;
-    letter-spacing: 1px;
     text-transform: uppercase;
-    padding-top: 150px;
-    font-weight: 700;
+    letter-spacing: 1px;
+    font-weight: $font-weight-bold;
+    color: $bright-color;
+  }
+  
+  &__link {
+    text-decoration: none;
+    color: $accent-color;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: $ipad-pro-screen-breakpoint) {
     &__message {
       padding: 0 20px;
     }
@@ -57,9 +61,8 @@
     }
   }
 
-  @media screen and (max-width: 900px) {
-    flex-direction: column;
-    justify-content: center;
+  @media screen and (max-width: $small-screen-breakpoint) {
+    @include centered-column;
     &__message {
       padding: 20px;
     }

@@ -1,36 +1,35 @@
 .info {
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
+  @include flex-spaced;
+  background-color: $light-color;
 
   &__container {
-    display: flex;
-    justify-content: space-around;
+    @include flex-around;
     padding: 100px 20px;
 
   }
 
   &__block {
-    display: flex;
-    flex-direction: column;
+    @include column;
     width: 200px;
     padding-left: 30px;
   }
 
   &__heading {
+    padding-bottom: 50px;
+
     font-size: 16px;
+    font-weight: $font-weight-bold;
     line-height: 11px;
     text-transform: uppercase;
-    color: #22356f;
-    font-weight: 700;
-    padding-bottom: 50px;
+    color: $dark-color;
   }
 
   &__paragraph {
+    padding-bottom: 20px;
+
     font-size: 14px;
     line-height: 23px;
     color: #909ab7;
-    padding-bottom: 20px;
   }
 
   &__links {
@@ -45,7 +44,7 @@
     flex-direction: column;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: $mobile-screen-breakpoint) {
     &__container {
       flex-direction: column;
       padding: 40px 20px;

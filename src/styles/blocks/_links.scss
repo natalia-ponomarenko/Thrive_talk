@@ -3,10 +3,10 @@
   color: #207fff;
   
   &:visited {
-    color: #22356f;
+    color: $dark-color;
   }
   &:hover {
-    color: #62d0df;
+    color: $accent-color;
   }
   &:active {
     color: #c4e769;

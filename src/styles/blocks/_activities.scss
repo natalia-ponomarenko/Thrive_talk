@@ -1,18 +1,18 @@
 .activities {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 480px;
-  background-color: #62d0df;
+
+  background-color: $accent-color;
 
   &__block {
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
+    @include centered;
 
     &--physical-health {
-      background-color: #22356f;
+      background-color: $dark-color;
     }
+
     &--mental-health {
       background-color: #0052c1;
     }
@@ -23,7 +23,7 @@
     }
   
     &--gymnastics {
-      background-color: #62d0df;
+      background-color: $accent-color;
     }
   
     &--crossfit {
@@ -37,24 +37,32 @@
 
   &__text {
     position: relative;
+    margin-top: 40px;
     padding-top: 70px;
+    width: 65%;
+
     font-size: 32px;
-    font-weight: 700;
+    font-weight: $font-weight-bold;
     line-height: 34px;
-    color: white;
-    width: 50%;
-    text-align: center;
-    margin-top: 20px;
+    color: $light-color;
+    text-align: start;
+
+    transition: transform 500ms;
+
+    &:hover {
+      transform: scale(1.1);
+      color: #f4f9e2;
+    }
 
     &::after {
       content: "";
       display: block;
       position: absolute;
-      background-color: white;
       height: 1px;
       width: 100%;
       top: 10%;
       
+      background-color: $light-color;
     }
 
     &:hover {
@@ -62,33 +70,28 @@
         display: block;
         position: absolute;
         content: "";
-        background-color: #e9b730;
         width: 12px;
         height: 12px;
+        left: -15%;
+        top: 18%;
+        
+        background-color: $bright-color;
         border-radius: 50%;
-        left: -10%;
-        top: 20%;
       }
     }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: $small-screen-breakpoint) {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 400px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: $mobile-screen-breakpoint) {
     grid-template-columns: 1fr;
     grid-auto-rows: 300px;
 
     &__text {
+      padding-top: 40px;
       font-size: 24px;
-      &:hover {
-        &::before {
-          top: 30%;
-          left: -5%;
-        }
-      }
     }
   }
 }

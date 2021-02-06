@@ -1,29 +1,29 @@
 .help {
+  padding-bottom: 120px;
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 300px;
-  padding-bottom: 120px;
-  background-color: white;
+  
+  background-color: $light-color;
 
   &__message {
-    display: flex;
-    justify-content: center;
+    @include centered;
     padding-bottom: 25px;
-    background-color: white;
+    background-color: $light-color;
   }
 
   &__after {
-    color: #9099b6;
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    color: #9099b6;
   }
 
   &__block {
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
+    @include centered;
     
     &--weight-lifting {
       background-color: #ffe2de;
@@ -34,7 +34,7 @@
     }
 
     &--iron {
-      background-color: #62d0df;
+      background-color: $accent-color;
     }
 
     &--fitness {
@@ -44,47 +44,50 @@
 
   &__text {
     position: relative;
-    padding-top: 50px;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 34px;
-    color: white;
-    width: 45%;
-    text-align: center;
+    width: 50%;
     margin-top: 20px;
+    padding-top: 50px;
+
+    font-size: 32px;
+    font-weight: $font-weight-bold;
+    line-height: 34px;
+    text-align: start;
+    color: $light-color;
+    transition: transform 500ms;
+
+    &:hover {
+      transform: scale(1.1);
+      color: $main-color;
+    }
 
     &::after {
       content: "";
       display: block;
       position: absolute;
-      background-color: white;
       height: 1px;
       width: 100%;
       top: 10%;
+      background-color: $light-color;
     }
 
-    &:hover {
-      color: #f4f9e2;
-
-      &::before {
-        display: block;
-        position: absolute;
-        content: "";
-        background-color: #e9b730;
-        width: 9px;
-        height: 9px;
-        border-radius: 50%;
-        left: -10%;
-        top: 20%;
-      }
+    &::before {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 9px;
+      height: 9px;
+      left: -15%;
+      top: 20%;
+      background-color: $bright-color;
+      border-radius: 50%;
     }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: $small-screen-breakpoint) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: $mobile-screen-breakpoint) {
     grid-template-columns: 1fr;
     grid-auto-rows: 300px;
 
@@ -93,10 +96,6 @@
     }
     &__text {
       font-size: 24px;
-      &::before {
-        top: 20%;
-        left: -15%;
-      }
     }
   }
 }

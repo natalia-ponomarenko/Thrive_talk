@@ -1,12 +1,10 @@
 .reasons {
-  background-color: #62d0df;
-  display: flex;
-  justify-content: space-between;
+  background-color: $accent-color;
+  @include flex-spaced;
 
   &__info {
-    display: flex;
+    @include centered;
     flex-direction: column;
-    justify-content: center;
     margin: 0 auto;
     gap: 75px;
   }
@@ -17,34 +15,34 @@
 
   &__heading {
     font-size: 36px;
-    font-weight: 700;
-    color: white;
+    font-weight: $font-weight-bold;
+    color: $light-color;
   }
 
   &__text {
     max-width: 555px;
-    color: white;
+    color: $light-color;
   }
 
   &__bold {
     font-size: 24px;
+    font-weight: $font-weight-bold;
     line-height: 35px;
-    font-weight: 700;
   }
 
   &__paragraph {
     font-size: 20px;
+    font-weight: $font-weight-regular;
     line-height: 30px;
-    font-weight: 500;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: $ipad-pro-screen-breakpoint) {
     &__info {
       padding: 50px;
     }
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: $small-screen-breakpoint) {
     flex-direction: column;
 
     &__info {
