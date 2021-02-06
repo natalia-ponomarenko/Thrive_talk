@@ -1,6 +1,7 @@
 .reasons {
-  background-color: $accent-color;
+  @include max-width;
   @include flex-spaced;
+  background-color: $accent-color;
 
   &__info {
     @include centered;
@@ -51,6 +52,15 @@
   
     &__img {
       width: 100%;
+      object-fit: cover;
+      height: 700px;
+    }
+  }
+
+  
+  @media screen and (max-width: $mobile-screen-breakpoint) {
+    &__img {
+      height: 300px;
     }
   }
 }

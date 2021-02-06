@@ -1,4 +1,5 @@
 .about {
+  @include max-width;
   display: grid;
   grid-template-columns: 1fr 2fr;
 
@@ -38,6 +39,9 @@
     &__heading {
       margin: 30px 0 20px;
       justify-self: center;
+    }
+    &__text {
+      font-size: 20px;
     }
   }
 }

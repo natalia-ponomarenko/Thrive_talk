@@ -33,3 +33,7 @@
   display: flex;
   align-items: center;
 }
+
+@mixin max-width {
+  max-width: 4000px;
+}

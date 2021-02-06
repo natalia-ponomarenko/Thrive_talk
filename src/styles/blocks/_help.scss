@@ -1,4 +1,5 @@
 .help {
+  @include max-width;
   padding-bottom: 120px;
 
   display: grid;

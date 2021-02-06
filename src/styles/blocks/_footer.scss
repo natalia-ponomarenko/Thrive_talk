@@ -1,4 +1,5 @@
 .footer {
+  @include max-width;
   @include flex-align-centered;
   height: 80px;
   padding-left: 200px;
