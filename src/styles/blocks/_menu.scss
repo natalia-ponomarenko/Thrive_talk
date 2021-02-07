@@ -1,6 +1,25 @@
 .menu {
   &__toggle {
     opacity: 0;
+
+    &__toggle:checked ~ &__btn > &__btn-span {
+      transform: rotate(45deg);
+    }
+    
+    &__toggle:checked ~ &__btn > &__btn-span::before {
+      top: 0;
+      transform: rotate(0);
+    }
+    
+    &__toggle:checked ~ &__btn > &__btn-span::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+    
+    &__toggle:checked ~ &__box {
+      visibility: visible;
+      left: 0;
+    }
   }
 
   &__btn {
@@ -71,24 +90,9 @@
 
   @media screen and (max-width: $tablet-screen-breakpoint) {
     display: block;
+  
+    &__toggle {
+      display: none;
+    }
   }
-}
-
-#menu__toggle:checked ~ .menu__btn > span {
-  transform: rotate(45deg);
-}
-
-#menu__toggle:checked ~ .menu__btn > span::before {
-  top: 0;
-  transform: rotate(0);
-}
-
-#menu__toggle:checked ~ .menu__btn > span::after {
-  top: 0;
-  transform: rotate(90deg);
-}
-
-#menu__toggle:checked ~ .menu__box {
-  visibility: visible;
-  left: 0;
 }
