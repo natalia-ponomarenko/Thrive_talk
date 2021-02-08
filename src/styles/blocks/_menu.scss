@@ -1,27 +1,4 @@
 .menu {
-  &__toggle {
-    opacity: 0;
-
-    &__toggle:checked ~ &__btn > &__btn-span {
-      transform: rotate(45deg);
-    }
-    
-    &__toggle:checked ~ &__btn > &__btn-span::before {
-      top: 0;
-      transform: rotate(0);
-    }
-    
-    &__toggle:checked ~ &__btn > &__btn-span::after {
-      top: 0;
-      transform: rotate(90deg);
-    }
-    
-    &__toggle:checked ~ &__box {
-      visibility: visible;
-      left: 0;
-    }
-  }
-
   &__btn {
     position: relative;
     @include flex-align-centered;
@@ -85,6 +62,29 @@
 
     &:hover {
       background-color: $light-color;
+    }
+  }
+
+  &__toggle {
+    opacity: 0;
+
+    &:checked ~ .menu__btn > .menu__btn-span {
+      transform: rotate(45deg);
+    }
+    
+    &:checked ~ .menu__btn > .menu__btn-span::before {
+      top: 0;
+      transform: rotate(0);
+    }
+    
+    &:checked ~ .menu__btn > .menu__btn-span::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+    
+    &:checked ~ .menu__box {
+      visibility: visible;
+      left: 0;
     }
   }
 
