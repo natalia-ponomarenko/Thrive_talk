@@ -1,6 +1,6 @@
 .link {
   text-decoration: none;
-  color: #207fff;
+  color: $accent-color-blue;
   
   &:visited {
     color: $dark-color;
@@ -9,6 +9,6 @@
     color: $accent-color;
   }
   &:active {
-    color: #c4e769;
+    color: $block-color-active;
   }
 }

@@ -15,7 +15,7 @@
     }
 
     &--mental-health {
-      background-color: #0052c1;
+      background-color: $accent-color-blue;
     }
   
     &--nutrition {
@@ -28,11 +28,11 @@
     }
   
     &--crossfit {
-      background-color: #dee1ff;
+      background-color: $block-color-light;
     }
   
     &--aerobics {
-      background-color: #8f00ff;
+      background-color: $block-color-dark;
     }
   }
 

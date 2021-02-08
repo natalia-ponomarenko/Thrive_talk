@@ -13,11 +13,11 @@
     @include centered;
     
     &--weight-lifting {
-      background-color: #ffe2de;
+      background-color: $block-color-jentle;
     }
 
     &--running {
-      background-color: #c4e769;
+      background-color: $block-color-active;
     }
 
     &--iron {
@@ -25,7 +25,7 @@
     }
 
     &--fitness {
-      background-color: #0052c1;
+      background-color: $accent-color-blue;
     }
   }
 
