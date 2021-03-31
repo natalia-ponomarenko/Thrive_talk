@@ -25,10 +25,21 @@
     color: $dark-color;
   }
 
+  &__button-link {
+    text-decoration: none;
+    color: white;
+    padding: 17px 19px;
+
+    &:hover {
+      color: $bright-color;
+    }
+  }
+
   &__button {
     width: 150px;
     height: 50px;
     margin: 120px 40px 70px 0;
+    padding: 0;
 
     @include no-border-outline-uppercase;
 
@@ -56,7 +67,7 @@
     &__text {
       margin-bottom: 80px;
     }
-  
+
     &__button {
       width: 125px;
       margin: 30px 10px;
@@ -72,7 +83,7 @@
       font-size: 20px;
       line-height: 32px;
     }
-    
+
     &__heading {
       margin-bottom: 50px;
 
